@@ -1,0 +1,65 @@
+{
+  "name": "@xicv/caffeinate-mcp",
+  "version": "0.1.0",
+  "description": "MCP server + Claude Code skill to control macOS sleep via natural language, with a claude-hud statusline indicator.",
+  "type": "module",
+  "license": "MIT",
+  "author": "xicv",
+  "homepage": "https://github.com/xicv/caffeinate-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/xicv/caffeinate-mcp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xicv/caffeinate-mcp.git"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude-code",
+    "claude",
+    "caffeinate",
+    "macos",
+    "sleep",
+    "statusline",
+    "claude-hud",
+    "skill"
+  ],
+  "bin": {
+    "caffeinate-mcp": "./dist/index.js",
+    "caffeinate-statusline": "./dist/statusline.js"
+  },
+  "files": [
+    "dist",
+    "skill",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "lint": "tsc --noEmit",
+    "test": "pnpm build && node --test tests/*.test.mjs",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "pnpm clean && pnpm test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "os": [
+    "darwin"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
