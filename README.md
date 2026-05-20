@@ -1,6 +1,6 @@
-# @xicv/caffeinate-mcp
+# @nickcao/caffeinate-mcp
 
-[![npm version](https://img.shields.io/npm/v/@xicv/caffeinate-mcp.svg)](https://www.npmjs.com/package/@xicv/caffeinate-mcp)
+[![npm version](https://img.shields.io/npm/v/@nickcao/caffeinate-mcp.svg)](https://www.npmjs.com/package/@nickcao/caffeinate-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![macOS](https://img.shields.io/badge/platform-macOS-blue.svg)](https://www.apple.com/macos/)
 
@@ -31,20 +31,20 @@ Context ██░░░░░░░░ 12% │ ☕ 7h 23m ███████�
 ### From npm (recommended)
 
 ```bash
-claude mcp add caffeinate --scope user -- npx -y @xicv/caffeinate-mcp
+claude mcp add caffeinate --scope user -- npx -y @nickcao/caffeinate-mcp
 ```
 
 Then symlink the skill:
 
 ```bash
 mkdir -p ~/.claude/skills
-ln -s "$(npm root -g)/@xicv/caffeinate-mcp/skill" ~/.claude/skills/caffeinate
+ln -s "$(npm root -g)/@nickcao/caffeinate-mcp/skill" ~/.claude/skills/caffeinate
 ```
 
 For the statusline, point `~/.claude/settings.json` `statusLine.command` at:
 
 ```bash
-npx -y -p @xicv/caffeinate-mcp caffeinate-statusline
+npx -y -p @nickcao/caffeinate-mcp caffeinate-statusline
 ```
 
 ### From source

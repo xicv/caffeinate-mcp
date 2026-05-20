@@ -1,5 +1,5 @@
 {
-  "name": "@xicv/caffeinate-mcp",
+  "name": "@nickcao/caffeinate-mcp",
   "version": "0.1.0",
   "description": "MCP server + Claude Code skill to control macOS sleep via natural language, with a claude-hud statusline indicator.",
   "type": "module",
@@ -26,8 +26,8 @@
     "skill"
   ],
   "bin": {
-    "caffeinate-mcp": "./dist/index.js",
-    "caffeinate-statusline": "./dist/statusline.js"
+    "caffeinate-mcp": "dist/index.js",
+    "caffeinate-statusline": "dist/statusline.js"
   },
   "files": [
     "dist",
